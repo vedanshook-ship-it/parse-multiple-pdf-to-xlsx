@@ -13,6 +13,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@effect/platform": "^0.94.5",
+    "@effect/platform-node": "^0.104.1",
     "@types/adm-zip": "^0.5.7",
     "@types/node": "^25.3.0",
     "effect": "^3.19.19",
