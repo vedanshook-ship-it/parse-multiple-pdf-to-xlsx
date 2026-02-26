@@ -2,16 +2,16 @@ import { Effect, Console, pipe } from "effect";
 import { FileSystem } from "@effect/platform";
 import { NodeContext, NodeRuntime } from "@effect/platform-node";
 
-import { extractZip } from "./extractZip.js";
-import { extractTextFromBuffer } from "./extractText.js";
+import { extractZip } from "./extract-zip.js";
+import { extractTextFromBuffer } from "./extract-text.js";
 
 const program = Effect.gen(function* () {
   const fs = yield* FileSystem.FileSystem;
 
-  const extractPath = "./src/outputs/Extracted";
+  const extractPath = "./src/outputs/extracted";
   const assetPath =
     "./src/assets/tmp601072_2025-06-01_2025-06-30_TAX_INVOICE.zip";
-  const outputPath = "./src/outputs/textData";
+  const outputPath = "./src/outputs/text-data";
 
   const extractFolderExists = yield* fs.exists(extractPath);
   let isFolderEmpty = true;
@@ -38,7 +38,7 @@ const program = Effect.gen(function* () {
   yield* Effect.all(
     pdfFiles.map((file, index) =>
       Effect.gen(function* () {
-        const filePath = `./src/outputs/Extracted/${file}`;
+        const filePath = `./src/outputs/extracted/${file}`;
 
         const buffer = yield* fs.readFile(filePath);
 
@@ -49,7 +49,7 @@ const program = Effect.gen(function* () {
         })
 
         const fileName = `file${index}.txt`;
-        const individualFilePath = `./src/outputs/textData/${fileName}`;
+        const individualFilePath = `./src/outputs/text-data/${fileName}`;
 
         yield* fs.writeFileString(
           individualFilePath,

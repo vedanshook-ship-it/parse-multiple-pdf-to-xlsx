@@ -5,7 +5,7 @@ export function extractZip(assetPath: string) {
     const zip = new AdmZip(assetPath);
     const zipEntries = zip.getEntries();
     console.log(`Found ${zipEntries.length} items.`);
-    zip.extractAllTo("./src/outputs/Extracted");
+    zip.extractAllTo("./src/outputs/extracted");
   } catch (error) {
     console.error("Extract Zip Error: ", error);
   }
