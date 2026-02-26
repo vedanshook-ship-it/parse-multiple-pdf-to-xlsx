@@ -16,10 +16,6 @@ try {
   const zipEntries = zip.getEntries();
   console.log(`Found ${zipEntries.length} items.`);
   zip.extractAllTo("./src/assets/Extracted");
-  // Console names of the zip file
-  //   zipEntries.forEach(entry => {
-  //     console.log(`${entry.entryName}`)
-  //   });
 } catch (error) {
   console.error("Error", error);
 }
