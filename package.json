@@ -15,11 +15,13 @@
   "devDependencies": {
     "@types/adm-zip": "^0.5.7",
     "@types/node": "^25.3.0",
+    "effect": "^3.19.19",
     "nodemon": "^3.1.14",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "adm-zip": "^0.5.16"
+    "adm-zip": "^0.5.16",
+    "pdfjs-dist": "^5.4.624"
   }
 }
