@@ -1,4 +1,4 @@
-import { Effect, Console, Array as ArrayEff } from "effect";
+import { Effect, Console } from "effect";
 import { FileSystem } from "@effect/platform";
 import { NodeContext, NodeRuntime } from "@effect/platform-node";
 
