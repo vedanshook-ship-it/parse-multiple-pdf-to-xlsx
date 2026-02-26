@@ -21,5 +21,5 @@ try {
   //     console.log(`${entry.entryName}`)
   //   });
 } catch (error) {
-  console.error("Some Error", error);
+  console.error("Error", error);
 }
