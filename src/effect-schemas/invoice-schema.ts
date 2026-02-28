@@ -38,6 +38,7 @@ const TableItems = Schema.Struct({
 });
 
 export const FinalInvoiceSchema = Schema.Struct({
+  type: Schema.Literal("CREDIT_NOTE"),
   ...CreditNoteSchema.fields,
   ...SoldBy.fields,
   ...BillTo.fields,
