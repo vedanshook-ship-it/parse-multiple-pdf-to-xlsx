@@ -1,5 +1,4 @@
 import { Effect } from "effect";
-
 import { createRequire } from "node:module";
 import { pathToFileURL } from "node:url";
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
